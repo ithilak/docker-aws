@@ -2,7 +2,7 @@
 FROM node:alpine
 
 ##COPY the build files
-WORKDIR /app
+WORKDIR '/app'
 
 COPY package.json .
 
