@@ -8,15 +8,3 @@ before_install:
 script:
    - docker run ithilak/docker-react npm run test -- --coverage
 
-deploy:
-  provider: elasticbeanstalk
-  region: "us-east-1"
-  app: "dockerinaws"
-  env: "Dockerinaws-env"
-  bucket_name: "elasticbeanstalk-us-east-1-858082616829"
-  bucket_path: "dockerinaws"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
